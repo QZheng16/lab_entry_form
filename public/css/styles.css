@@ -1,0 +1,60 @@
+/***********************************Variables*******************************************/
+:root{
+    --LAB-BG-THEME1: #464660;
+    --LAB-BG-THEME2: rgba(152, 210, 224, 0.466);
+    --LAB-FG-THEME1: #368B85;
+    --LAB-FG-THEME2: rgba(106, 153, 128, 0.575);
+    --LAB-TXT-THEME1: #B4B897;
+    --LAB-TXT-THEME2: #F1E9E5;
+}
+/***********************************Variables - END*******************************************/
+
+
+body{
+
+    background-color: var(--LAB-TXT-THEME2);
+}
+
+
+/***********************************Navigation Bar*******************************************/
+.navBar{
+    display: grid;
+
+    grid-template-columns: 4vw 96vw;
+    grid-template-rows: 7vh 93vh;
+    grid-template-areas:
+        "leftBar main"
+        "leftBar main"
+}
+
+
+
+.leftBar{
+    grid-area: leftBar;
+    background-color: var(--LAB-BG-THEME1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 3rem;
+    gap: 5rem;
+
+}
+
+.leftBar button{
+    background: none;
+    background-color:var(--LAB-BG-THEME2);
+    border: none;
+    border-radius: 3rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+
+
+
+
+
+
+/***********************************Navigation Bar - END*******************************************/
