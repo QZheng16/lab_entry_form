@@ -8,8 +8,10 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    const title = "Home";
-    res.render('home',{title:title});
+    const title = "Dashboard";
+
+
+    res.render('dashboard',{title:title});
 });
 
 
