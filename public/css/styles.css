@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
 
 /***********************************Variables*******************************************/
-:root{
+:root {
     --LAB-BG-THEME1: #FFB319;
     --LAB-BG-THEME2: #470D21;
     --LAB-FG-THEME1: #FFE194;
@@ -9,29 +9,33 @@
     --LAB-TXT-THEME1: #E8F6EF;
     --LAB-TXT-THEME2: #B8DFD8;
 }
+
 /***********************************Variables - END*******************************************/
 
 
-body{
+body {
 
     background-color: var(--LAB-FG-THEME1);
 }
 
 
 /***********************************Navigation Bar*******************************************/
-.nav{
+.main {
     display: grid;
     font-family: 'Roboto', sans-serif;
-    grid-template-columns: 4vw 96vw;
+    grid-template-columns: minmax(auto,5vw) minmax(auto,95vw);
     grid-template-rows: 7vh 93vh;
+    
     grid-template-areas:
-        "leftBar main"
-        "leftBar main"
+        "leftBar  main"
+        "leftBar  main";
+    
+    
 }
 
 
 
-.navBar{
+.navBar {
     grid-area: leftBar;
     background-color: var(--LAB-BG-THEME1);
     display: flex;
@@ -40,49 +44,149 @@ body{
     justify-content: space-around;
     margin: .5rem;
     border-radius: 3rem;
-    gap: 5rem;
+    gap: 20%;
     min-width: 6rem;
+    min-height: 45rem;
+    box-shadow: 1px 15px 25px 1px rgba(0,0,0,0.35);
 
 }
 
-.nav_center{
+.nav_top {
+    flex-shrink: 1;
+}
+
+.nav_top button {
+    flex-basis: 4rem;
+    align-self: stretch;
+    background: none;
+    background-color: var(--LAB-FG-THEME1);
+    color: var(--LAB-BG-THEME2);
+    border: none;
+    border-radius: 5rem 5rem 1rem 1rem;
+    opacity: 60%;
+    padding: 1rem 1.5rem 0;
+    box-shadow: 1px 15px 25px 1px rgba(0,0,0,0.35);
+    
+}
+
+.nav_center {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     align-items: center;
 }
 
-.nav_center button{
-    flex-basis: 5rem;
-    align-self: stretch;
+
+
+.nav_center button {
+    flex-basis: 4rem;
     background: none;
-    background-color:var(--LAB-FG-THEME1);
+    background-color: var(--LAB-FG-THEME1);
     color: var(--LAB-BG-THEME2);
     border: none;
     border-radius: 3rem;
     opacity: 60%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-shadow: 1px 15px 10px 1px rgba(0,0,0,0.35);
 }
 
-.nav_center button:hover{
+.main button img {
+    max-width: 2rem;
+    max-height: 2rem;
+}
+
+.nav_center button:hover {
     opacity: 100%;
     transform: rotate(10deg);
-    box-shadow: none;
+    box-shadow: 1px 15px 10px 1px rgba(0,0,0,0.35);
 }
 
-.nav_bot{
+.nav_bot {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
-.nav_bot h2{
+.nav_bot_frame {
     color: var(--LAB-BG-THEME2);
+    background-color: var(--LAB-FG-THEME1);
+    border-radius: .5rem;
+    padding: .2rem;
+    margin: .5rem;
+    box-shadow: 1px 15px 10px .01rem rgba(0,0,0,0.35);
 }
 
+.nav_bot h3 {
 
+    font-size: 1rem;
 
+}
 
-
+.nav_bot p {
+    font-size: .9rem;
+}
 
 
 /***********************************Navigation Bar - END*******************************************/
+
+
+/**********************************Dashboard*******************************************/
+
+
+.dash_container{
+    grid-area: main;
+
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: minmax(auto,1fr) minmax(auto,1fr) minmax(auto,1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas:
+        "graph1       graph2     info"
+        "chartinfo  chartinfo    info";
+
+
+}
+
+.dash_container article{
+    background-color: var(--LAB-BG-THEME1);
+    border-radius: 1rem;
+
+    text-align: center;
+    box-shadow: 5px 15px 10px .01rem rgba(0,0,0,0.35);
+
+}
+
+.graph1{
+    grid-area: graph1;
+    
+
+}
+
+.graph2{
+    grid-area: graph2;
+    
+
+}
+
+.graph3{
+    grid-area: graph2;
+    
+
+}
+
+.lab_info{
+    grid-area: info;
+    
+
+
+}
+
+.chart_info{
+    grid-area: chartinfo;
+    
+
+
+}

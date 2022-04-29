@@ -1,36 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Entry</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <section class="nav">
+<%- include("header"); %>
 
-        <section class="navBar">
-            <section class="nav_top">
-                <button type="button">Login</button>
-            </section>
+    <section class="main">
+        <%- include("nav_bar"); %>
 
-            <section class="nav_center">
-                <button type="button">Dashboard</button>
-                <button type="button">Data Entry</button>
-                <button type="button">Charts</button>
-            </section>
+        <section class="dash_container">
+            <article class="graph1">
+                <h3>Graph1</h3>
+            </article>
 
-            <section class="nav_bot">
-                <h3>Date</h3>
-                <p>Time</p>
-            </section>
+            <article class="graph2">
+                <h3>Graph2</h3>
+            </article>
+
+            <article class="lab_info">
+                <h3>Lab Info</h3>
+            </article>
+
+            <article class="chart_info">
+                <h3>Chart Info</h3>
+            </article>
 
         </section>
 
+
+
+
+
     </section>
 
-    <script src="js/client.js"></script>
-</body>
-</html>
+<%- include("footer"); %>

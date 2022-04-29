@@ -1,9 +1,23 @@
-setInterval(()=>{ 
+
+
+
+
+let updateTime = async ()=>{
     const today = new Date();
-    const curDate = `${today.getMonth()}/${today.getDay()}/${today.getFullYear()}`;
+    const curDate = today.toLocaleDateString();
     let curTime = today.toLocaleTimeString();
+    
+    const date = document.querySelector(".nav_bot h3");
+    const time = document.querySelector(".nav_bot p");
+    
+    
+    date.innerText = curDate;
+    time.innerText = curTime;
 
-    document.querySelector(".nav_bot h3").innerText = curDate;
-    document.querySelector(".nav_bot p").innerText = curTime;
+ 
+}
 
-}, 1000); 
+
+updateTime();
+
+setInterval(updateTime, 1000);
