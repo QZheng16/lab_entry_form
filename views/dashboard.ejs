@@ -5,27 +5,65 @@
 
         <section class="dash_container">
             <article class="graph1">
-                <h3>Graph1</h3>
+                <h3>Lab Line Graph</h3>
+                <canvas id="labDashChart1"></canvas>
             </article>
 
             <article class="graph2">
-                <h3>Graph2</h3>
+                <h3>Lab Bar Graph</h3>
+                <canvas id="labDashChart2"></canvas>
             </article>
 
-            <article class="lab_info">
-                <h3>Lab Info</h3>
+            <article class="gen_info">
+                <h3>Today's Weather</h3>
+                <div> 
+                    <h3><%= weather.main.temp %>°F</h3>
+                    <h3><%= weather.weather[0].main %></h3>
+                    <%let weatherIcon = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`%>
+                    <img src=<%= weatherIcon%>>
+                    <h3><%=weather.name%>, <%=weather.sys.country%></h3>
+                </div>
             </article>
 
             <article class="chart_info">
-                <h3>Chart Info</h3>
+                <h1>Avalon Water Authority</h1>
+
+                <button class="btn_left" data-slide="prev" type="button"><i class="fas fa-angle-left fa-5x"></i></button>
+                <button class="btn_right" data-slide="next" type="button"><i class="fas fa-angle-right fa-5x"></i></button>
+
+
+                <div class="glide">
+                    <div data-glide-el="track" class="glide__track">
+                      <ul class="glide__slides">
+                        <li class="glide__slide" data-active-slide>
+                            <p>
+                                Free Water Consultations <br>
+                                In Person, By Phone <br>
+                                or Online
+                            </p>
+                            <p>
+                                Getting better, cleaner water is safe, easy and <br>
+                                more convenient than ever with in-home or virtual <br>
+                                appointments with your local Culligan water expert.<br>
+                            </p>
+                            <a href="#">Schedule You Free Water Test</a>
+                            <img src="images\water-treatment-image1.jpg" alt="Water Treatment Image1">
+                        </li>
+                        <li class="glide__slide" >
+
+                            <img src="images\water-treatment-image2.jpg" alt="Water Treatment Image2">
+                        </li>
+                        <li class="glide__slide" >
+
+                            <img src="images\water-treatment-image3.jpg" alt="Water Treatment Image3">
+                        </li>
+                      </ul>
+                    </div>
+                </div>
             </article>
 
         </section>
 
-
-
-
-
     </section>
-
+    <script src="js/dash.js"></script>
 <%- include("footer"); %>

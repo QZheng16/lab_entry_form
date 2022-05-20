@@ -1,7 +1,6 @@
 
 
-
-
+// Renders and updates time on nav bar
 let updateTime = async ()=>{
     const today = new Date();
     const curDate = today.toLocaleDateString();
@@ -18,6 +17,9 @@ let updateTime = async ()=>{
 }
 
 
+
+
 updateTime();
 
 setInterval(updateTime, 1000);
+// Renders and updates time on nav bar END
