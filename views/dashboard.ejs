@@ -16,13 +16,13 @@
 
             <article class="gen_info">
                 <h3>Today's Weather</h3>
-                <div> 
+                <section> 
                     <h3><%= weather.main.temp %>°F</h3>
                     <h3><%= weather.weather[0].main %></h3>
                     <%let weatherIcon = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`%>
                     <img src=<%= weatherIcon%>>
                     <h3><%=weather.name%>, <%=weather.sys.country%></h3>
-                </div>
+                </section>
             </article>
 
             <article class="chart_info">
@@ -35,27 +35,54 @@
                 <div class="glide">
                     <div data-glide-el="track" class="glide__track">
                       <ul class="glide__slides">
-                        <li class="glide__slide" data-active-slide>
-                            <p>
-                                Free Water Consultations <br>
-                                In Person, By Phone <br>
-                                or Online
-                            </p>
-                            <p>
-                                Getting better, cleaner water is safe, easy and <br>
-                                more convenient than ever with in-home or virtual <br>
-                                appointments with your local Culligan water expert.<br>
-                            </p>
-                            <a href="#">Schedule You Free Water Test</a>
-                            <img src="images\water-treatment-image1.jpg" alt="Water Treatment Image1">
-                        </li>
                         <li class="glide__slide" >
+                            <section class="slide_content1">
+                                <p>
+                                    SIMPLE SOLUTIONS. SUSTAINABLE RESULTS.
+                                </p>
+                                <p>
+                                    PROVIDING INNOVATIVE, EFFECTIVE WATER TREATMENT
+                                </p>
+                                <a href="#">Get Quote</a>
 
-                            <img src="images\water-treatment-image2.jpg" alt="Water Treatment Image2">
+                            </section>
+
+                            <img class="slide_bg" src="images\water-treatment-image1.jpg" alt="Water Treatment Image1">
                         </li>
-                        <li class="glide__slide" >
+                        <li class="glide__slide">
+                            <section class="slide_content2">
+                                <p>
+                                    Free Water Consultations <br>
+                                    In Person, By Phone <br>
+                                    or Online
+                                </p>
+                                <p>
+                                    Getting better, cleaner water is safe, easy and <br>
+                                    more convenient than ever with in-home or virtual <br>
+                                    appointments with your local Culligan water expert.<br>
+                                </p>
+                                <a href="#">Schedule You Free Water Test</a>
 
-                            <img src="images\water-treatment-image3.jpg" alt="Water Treatment Image3">
+
+                            </section>
+                            <img class="slide_content_img" src="images\consultation.png" alt="Water Treatment Consultation">
+                            <img class="slide_bg" src="images\water-treatment-image2.jpg" alt="Water Treatment Image2">
+                        </li>
+                        <li class="glide__slide" data-active-slide >
+                            <section class="slide_content3">
+                                <p>
+                                    Learn More About Us <br>
+                                </p>
+                                <p>
+                                    We are deidcated professionals to <br>
+                                    better the life of our community <br>
+                                </p>
+                                <a href="#">About Us</a>
+
+
+                            </section>
+                            <img class="slide_content_img" src="images\team.png" alt="Water Treatment Team">
+                            <img class="slide_bg" src="images\water-treatment-image3.jpg" alt="Water Treatment Image3">
                         </li>
                       </ul>
                     </div>

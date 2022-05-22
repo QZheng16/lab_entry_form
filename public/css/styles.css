@@ -215,7 +215,7 @@ a img {
     opacity: 0;
     position: absolute;
     transition: opacity 1s;
-
+    text-align: left;
 
 }
 
@@ -223,61 +223,116 @@ a img {
     opacity: 1;
 }
 
-.glide__slide p:nth-child(1){
-
+.glide__slide section{
     position: absolute;
-    color: var(----LAB-TXT-THEME1);
     opacity: 1;
     z-index: 3;
-    top: 2rem;
-    left: 17rem;
-    text-align: left;
-    font-size: 2rem;
-    line-height: 3rem;
-    font-weight: 900;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
-.glide__slide p:nth-child(2){
 
-    position: absolute;
-    color: var(--LAB-TXT-THEME1);
-    opacity: 1;
-    z-index: 3;
-    top: 13rem;
-    left: 17rem;
-    text-align: left;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 300;
-
+.slide_content1{
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.glide__slide a{
-    padding: 1rem;
-    color: black;
+.slide_content1 a{
+    align-self: center;
+}
+
+.slide_content1 p:nth-child(2){
+    width: 27rem;
+    align-self: center;
+}
+
+.slide_content2{
+    top: 5rem;
+    left: 17rem;
+    text-align: left;
+}
+
+.slide_content_img{
+   width: 20rem;
+   height: 20rem;
+   top: 5rem;
+   left: 60rem;
+   position: absolute;
+   opacity: 1;
+   z-index: 3;
+   object-fit: cover;
+   object-position: 100% 0%;
+   border-radius: 100%;  
+}
+
+
+
+.slide_content3{
+    top: 5rem;
+    left: 17rem;
+    text-align: left;
+}
+
+.slide_content1 p:nth-child(2){
+    width: 27rem;
+    align-self: center;
+}
+
+
+
+.glide__slide section a{
     background-color: orange;
-    position: absolute;
-    top: 20rem;
-    left: 17rem;
-    z-index: 3;
     border-radius: .5rem;
+    color: black;
+    padding: 1rem;
     text-decoration: none;
-    
-
+    text-align: center;
+    width: 15rem;
+    flex: 0 1 1rem;
 }
 
-.glide__slide img{
+
+.glide__slide section p{
+    color: var(----LAB-TXT-THEME1);
+    background: rgba(0, 3, 0, 0.2);
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.glide__slide section p:nth-child(1){
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 3rem;
+    margin: 0;
+}
+
+.glide__slide section p:nth-child(2){
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+
+
+
+.slide_bg{
     width: 100%;
     height: auto; 
     opacity: 0.5;
     object-fit: cover;
     object-position: 0 -15rem;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
 
 .chart_info button{
-
     position: absolute;
     top: 50%;  
     transform: translate(0, -50%);
