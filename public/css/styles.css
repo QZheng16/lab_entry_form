@@ -173,23 +173,14 @@ a img {
     grid-area: info;
     position: relative;
     min-width: 10rem;
-
 }
 
 .weather_icon{
-    background-color: var(--LAB-BG-THEME1);
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 100%;
+
     animation: floating 5s ease-in-out infinite;
-
-}
-
-.weather_icon img{
-
     filter: drop-shadow(0 1rem 4mm rgba(0,0,0,0.35));
-}
 
+}
 
 
 @keyframes floating{
@@ -211,6 +202,7 @@ a img {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
 }
 
 /*Carousel*/
@@ -433,7 +425,7 @@ a img {
 
     .main {
         grid-template-columns: 1fr;
-        grid-template-rows: 5% 90%;
+        grid-template-rows: 5% 95%;
         
         grid-template-areas:
             "leftBar"
@@ -442,9 +434,12 @@ a img {
     }
 
     .navBar {
+        position: sticky;
+        top: 0rem;
         flex-direction: row;
-        min-height: 5rem;
+        min-height: 7rem;
         gap: 2rem;
+        z-index: 4;
     }
 
     .nav_center {
@@ -462,7 +457,7 @@ a img {
 
     .dash_container{
         grid-template-columns: minmax(auto,1fr);
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 10% 1fr 1fr;
         gap: 1rem;
         grid-template-areas:
         "chartinfo"
@@ -484,8 +479,25 @@ a img {
         width: 20rem;
         height: 20rem;
         top: 6rem;
-        left: 40rem;
+        left: 35rem;
         border-radius: 100%;
 
      }
+
+     .gen_info {
+        margin: auto;
+        width: 30rem;
+        height: 10rem;
+        position: relative;
+    }
+
+
+    .gen_info section{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
