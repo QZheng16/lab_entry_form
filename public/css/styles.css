@@ -42,10 +42,10 @@ body {
     align-items: center;
     justify-content: space-around;
     margin: .5rem;
-    border-radius: 3rem;
+    border-radius: 1rem;
     gap: 20%;
     min-width: 7rem;
-    min-height: 45rem;
+    min-height: 50rem;
     box-shadow: 1px 15px 25px 1px rgba(0,0,0,0.35);
 
 }
@@ -159,33 +159,72 @@ a img {
 /*Line Graph*/
 .graph1{
     grid-area: graph1;
-    min-width: 40rem;
+    min-width: 37vw;
     padding: 1rem;
 }
 /*Bar Graph*/
 .graph2{
     grid-area: graph2;
-    min-width: 40rem;
+    min-width: 37vw;
     padding: 1rem;
 }
 /*Weather Info*/
 .gen_info{
     grid-area: info;
+    position: relative;
+    min-width: 10rem;
+
+}
+
+.weather_icon{
+    background-color: var(--LAB-BG-THEME1);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 100%;
+    animation: floating 5s ease-in-out infinite;
+
+}
+
+.weather_icon img{
+
+    filter: drop-shadow(0 1rem 4mm rgba(0,0,0,0.35));
+}
+
+
+
+@keyframes floating{
+    0%{
+        transform: translate(0, 0);
+    }
+    50%{
+        transform: translate(0, -1rem);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+
+
+.gen_info section{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*Carousel*/
-.chart_info{
+.dash_info{
     grid-area: chartinfo;
     overflow: hidden;
     position: relative;
     margin: 0;
     padding: 0;
     border: 0;
-    min-height: 15rem;
-
+    min-height: 30rem;
 }
 
-.chart_info h1{
+.dash_info h1{
     margin: 2rem;
     position: absolute; 
     left: 50%; 
@@ -257,17 +296,20 @@ a img {
 }
 
 .slide_content_img{
-   width: 20rem;
+   width: 40rem;
    height: 20rem;
-   top: 5rem;
-   left: 60rem;
+   top: 6rem;
+   left: 50rem;
    position: absolute;
    opacity: 1;
    z-index: 3;
    object-fit: cover;
    object-position: 100% 0%;
-   border-radius: 100%;  
+   border-radius: 1rem; 
+   filter: drop-shadow(1rem 1rem 4mm rgba(0,0,0,0.35));
 }
+
+
 
 
 
@@ -332,7 +374,7 @@ a img {
 
 
 
-.chart_info button{
+.dash_info button{
     position: absolute;
     top: 50%;  
     transform: translate(0, -50%);
@@ -345,7 +387,7 @@ a img {
     cursor: pointer;
 }
 
-.chart_info button:hover{
+.dash_info button:hover{
     opacity: 100%;
 }
 
@@ -358,4 +400,92 @@ a img {
  }
 
 
+ @media screen and (max-width: 1750px ){
 
+    .slide_content2{
+        left: 10rem;
+    }
+
+    .slide_content3{
+        left: 10rem;
+
+    }
+    .slide_content_img{
+        width: 35rem;
+        height: 20rem;
+        top: 6rem;
+        left: 40rem;
+
+     }
+}
+
+@media screen and (max-width: 1475px ){
+
+
+    .slide_content_img{
+        width: 20rem;
+        border-radius: 100%;
+
+     }
+}
+
+@media screen and (max-width: 1100px ){
+
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 90%;
+        
+        grid-template-areas:
+            "leftBar"
+            "main";
+         
+    }
+
+    .navBar {
+        flex-direction: row;
+        min-height: 5rem;
+        gap: 2rem;
+    }
+
+    .nav_center {
+
+        flex-direction: row;
+        gap: 5rem;
+
+    }
+
+    .nav_center a {
+        padding: 1rem 2rem 1rem;
+    }
+
+
+
+    .dash_container{
+        grid-template-columns: minmax(auto,1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        grid-template-areas:
+        "chartinfo"
+        "info"
+        "graph1"
+        "graph2";
+
+    }
+
+    .slide_content2{
+        left: 10rem;
+    }
+
+    .slide_content3{
+        left: 10rem;
+
+    }
+    .slide_content_img{
+        width: 20rem;
+        height: 20rem;
+        top: 6rem;
+        left: 40rem;
+        border-radius: 100%;
+
+     }
+}
