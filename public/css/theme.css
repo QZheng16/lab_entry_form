@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
+
+/***********************************Variables*******************************************/
+:root {
+    --LAB-BG-THEME1: hsl(222, 72%, 47%);
+    --LAB-BG-THEME2: hsl(197, 91%, 45%);
+    --LAB-FG-THEME1: hsl(191, 84%, 95%);
+    --LAB-FG-THEME2: hsl(169, 38%, 80%);
+    --LAB-TXT-THEME1: hsl(191, 84%, 95%);
+    --LAB-TXT-THEME2: hsl(169, 38%, 80%);
+}
+
+/***********************************Variables - END*******************************************/

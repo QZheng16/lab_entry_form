@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const ejs = require('ejs');
 const fetch = require('node-fetch');
+const mongoose = require('mongoose');
 
 //Express setup
 app.use(express.urlencoded({extended: false}));
@@ -20,6 +21,32 @@ async function getWeatherDataAsync(city)
   let data = await response.json()
   return data;
 }
+
+//MongoDB Connection using Mongoose
+mongoose.connect('mongodb://localhost:27017/labDB', ()=> console.log('mongoDB running on port 27017'));
+
+let selectedDatetime = new Date(Date.UTC(2022, 1, 1, 0, 0, 0));
+
+const today = new Date();
+const curDate = today.toLocaleString("en-US",{ timeZone: 'UTC' });
+
+console.log(selectedDatetime);
+
+const dataSchema = mongoose.Schema({
+    tagname: String,
+    value: Number,
+    date: Date
+});
+
+const LabData = new mongoose.model('LabData', dataSchema);
+
+
+let turbData = new LabData({
+    tagname: "Raw Turbidity",
+    value: 1.231,
+    date: curDate
+});
+
 
 
 

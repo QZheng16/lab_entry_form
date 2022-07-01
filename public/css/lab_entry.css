@@ -1,0 +1,30 @@
+.lab_entry_container{
+    grid-area: main;
+
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: minmax(auto,1fr);
+    grid-template-rows: 1fr 10fr;
+    gap: 1rem;
+    grid-template-areas:
+    "titleBar"
+    "dataContainer";
+
+    color: var(--LAB-TXT-THEME1);
+}
+
+.title_bar{
+    grid-area: titleBar;
+    padding: 1rem;
+    background-color: var(--LAB-BG-THEME1);
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.data_container{
+    grid-area: dataContainer;
+    padding: 1rem;
+    background-color: var(--LAB-BG-THEME1);
+    text-align: center;
+    border-radius: 1rem;
+}
