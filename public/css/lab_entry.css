@@ -23,8 +23,29 @@
 
 .data_container{
     grid-area: dataContainer;
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--LAB-BG-THEME1);
     text-align: center;
     border-radius: 1rem;
+
+}
+
+.data_display_container1{
+    background-color: var(--LAB-FG-THEME1);
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    
+
+}
+
+#data_card1{
+    background-color: var(--LAB-BG-THEME1);
+    flex: 0 0 7rem;
+    border-radius: 1rem;
+    min-height: 15rem;
+    
 }

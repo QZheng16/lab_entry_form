@@ -8,7 +8,29 @@
         </article>
 
         <article class="data_container">
-            <h3>Date</h3>
+            <h3>Title</h3>
+            
+            <select name="tagID" id="tagID">
+                <option value="Turbidity" selected>Turbidity</option>
+                <option value="Level">Level</option>
+                <option value="Flow">Flow</option>
+            </select>
+            <br>
+            <label for="meeting-time">Pick Timeframe:</label>
+            <% const today = new Date();%> 
+            <% const curDate = today.toISOString().substring(0,10);%> 
+            <% console.log(curDate); %> 
+            <input type="date" id="meeting-time"
+                   name="meeting-time" value= <%=curDate%> >
+
+            <section class="data_display_container1">
+                <article id="data_card1">
+                    <h4>Entry 1</h4>
+                    <h5>Timeframe</h5>
+
+                </article>
+
+            </section>
         </article>
  
 
